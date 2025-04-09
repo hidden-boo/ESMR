@@ -1,0 +1,5 @@
+Metric,Baseline RL,Ablation RL
+Emotion Recovery Time,7.823,7.737
+Negative Emotion Reduction,14.98,15.449
+Average Emotion Valence,-0.005989999999999989,-0.028643333333333323
+Engagement Score,0.18782333333333331,0.1814133333333333

@@ -1,0 +1,33 @@
+
+ANOVA Test Results  Engagement Features Across emotions:
+engagement score: F-stat=27924.98, p-value=0.00000
+scrolling time: F-stat=46735.99, p-value=0.00000
+video watching duration: F-stat=14475.55, p-value=0.00000
+previous day engagement: F-stat=6374.81, p-value=0.00000
+previous week avg engagement: F-stat=5927.99, p-value=0.00000
+liking behavior: F-stat=3938.90, p-value=0.00000
+commenting activity: F-stat=1258.62, p-value=0.00000
+sharing behavior: F-stat=475.70, p-value=0.00000
+ Emotions significantly differ based on engagement trends!
+
+
+Emotion Distribution:
+user_emotion
+churned         8929
+disappointed    6624
+happy           6518
+stressed        5841
+excited         1191
+frustrated       897
+Name: count, dtype: int64
+
+Engagement Trends for Stressed Users:
+       engagement_score  scrolling_time   news_ratio
+count       5841.000000     5841.000000  5841.000000
+mean        2210.486385      983.677934     0.103673
+std          900.575846      224.787406     0.081179
+min          579.083828      362.931277     0.014176
+25%         1467.960863      874.770241     0.046872
+50%         2316.552947     1000.000000     0.070987
+75%         2777.246266     1200.000000     0.140916
+max         4552.863866     1500.000000     0.416734

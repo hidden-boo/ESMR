@@ -1,0 +1,14 @@
+{
+    "users_with_happy_dominance": 977,
+    "positive_trajectories": 354,
+    "final_dominant_emotions": {
+        "stressed": 140,
+        "excited": 211,
+        "lonely": 40,
+        "happy": 349,
+        "anxious": 118,
+        "angry": 40,
+        "disappointed": 102
+    },
+    "total_users": 1000
+}

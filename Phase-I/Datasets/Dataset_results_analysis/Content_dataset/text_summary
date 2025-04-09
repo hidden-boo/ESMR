@@ -1,0 +1,53 @@
+Basic Info on Content Dataset:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   video_id           1000 non-null   object 
+ 1   emotion            1000 non-null   object 
+ 2   emotion_intensity  1000 non-null   int64  
+ 3   video_duration     1000 non-null   int64  
+ 4   engagement_score   1000 non-null   float64
+ 5   category           1000 non-null   object 
+ 6   theme              1000 non-null   object 
+dtypes: float64(1), int64(2), object(4)
+memory usage: 54.8+ KB
+None
+ Sample Data:
+  video_id       emotion  emotion_intensity  video_duration  engagement_score  \
+0    V0001       excited                  4              16         16.534836   
+1    V0002      stressed                  6              17         35.544590   
+2    V0003  disappointed                  4              26         46.235135   
+3    V0004       anxious                  6              35         56.007523   
+4    V0005         happy                  5              43         55.202811   
+
+        category          theme  
+0    educational     motivation  
+1  entertainment    daily_humor  
+2  inspirational     motivation  
+3           news  mental_health  
+4           news  mental_health  
+Summary Statistics:
+       emotion_intensity  video_duration  engagement_score
+count        1000.000000     1000.000000       1000.000000
+mean            4.798000       30.311000         58.313804
+std             2.097998       13.547244         34.816016
+min             1.000000       10.000000          5.000000
+25%             3.000000       20.000000         30.504989
+50%             5.000000       30.000000         49.403851
+75%             6.000000       40.000000         83.197290
+max            10.000000       77.000000        120.000000
+Missing Values:
+video_id             0
+emotion              0
+emotion_intensity    0
+video_duration       0
+engagement_score     0
+category             0
+theme                0
+dtype: int64
+
+ANOVA Test for Emotion & Engagement: p-value = 0.58159
+ANOVA Test for Category & Engagement: p-value = 0.00000
+ T-Test for Virality & Engagement: t-stat = 61.47964, p-value = 0.00000

@@ -1,0 +1,177 @@
+Missing Values:
+ user_id                            0
+day                                0
+scrolling_time                     0
+video_watching_duration            0
+post_story_views                   0
+time_spent_daily                   0
+daily_logins                       0
+posting_frequency                  0
+liking_behavior                    0
+commenting_activity                0
+sharing_behavior                   0
+educational_time_spent             0
+entertainment_time_spent           0
+news_time_spent                    0
+inspirational_time_spent           0
+user_profile                       0
+churned                            0
+assigned_videos                    0
+skipped_videos                     0
+assigned_videos_with_timestamps    0
+engagement_score                   0
+previous_day_engagement            0
+previous_week_avg_engagement       0
+engagement_growth_rate             0
+liking_trend                       0
+commenting_trend                   0
+sharing_trend                      0
+scrolling_watching_ratio           0
+education_ratio                    0
+entertainment_ratio                0
+news_ratio                         0
+inspiration_ratio                  0
+days_since_last_engagement         0
+dtype: int64
+ Summary Statistics:
+                 day  scrolling_time  video_watching_duration  \
+count  30000.000000    30000.000000             30000.000000   
+mean      15.500000      751.038282               690.092442   
+std        8.655586      524.257960               672.078991   
+min        1.000000        0.000000                 0.000000   
+25%        8.000000        0.000000                 0.000000   
+50%       15.500000     1000.000000               571.885911   
+75%       23.000000     1200.000000              1085.841578   
+max       30.000000     1500.000000              2893.949596   
+
+       post_story_views  time_spent_daily  daily_logins  posting_frequency  \
+count      30000.000000      30000.000000  30000.000000       30000.000000   
+mean         974.042600       2305.686308      2.116167           0.301667   
+std          698.081322       1637.644387      1.994193           0.688873   
+min            0.000000          0.000000      0.000000           0.000000   
+25%            0.000000          0.000000      0.000000           0.000000   
+50%         1132.500000       2753.375681      2.000000           0.000000   
+75%         1555.000000       3433.156790      4.000000           0.000000   
+max         1999.000000       5649.000000     11.000000           8.000000   
+
+       liking_behavior  commenting_activity  sharing_behavior  ...  \
+count     30000.000000         30000.000000      30000.000000  ...   
+mean         12.830000             1.169667          0.191167  ...   
+std          22.019444             2.521023          0.615225  ...   
+min           0.000000             0.000000          0.000000  ...   
+25%           0.000000             0.000000          0.000000  ...   
+50%           5.000000             0.000000          0.000000  ...   
+75%          16.000000             1.000000          0.000000  ...   
+max         501.000000            24.000000          6.000000  ...   
+
+       engagement_growth_rate  liking_trend  commenting_trend  sharing_trend  \
+count            30000.000000  30000.000000      30000.000000   30000.000000   
+mean               -28.442926     -0.140633         -0.023900      -0.002733   
+std                919.062918     21.760025          3.257496       0.833596   
+min              -4158.609635   -448.000000        -24.000000      -6.000000   
+25%               -331.000541     -3.000000          0.000000       0.000000   
+50%                  0.000000      0.000000          0.000000       0.000000   
+75%                281.304664      3.000000          0.000000       0.000000   
+max               4085.740479    485.000000         24.000000       6.000000   
+
+       scrolling_watching_ratio  education_ratio  entertainment_ratio  \
+count              30000.000000     30000.000000         30000.000000   
+mean                   0.996529         0.066434             0.066974   
+std                    0.833239         0.069162             0.069333   
+min                    0.000000         0.000000             0.000000   
+25%                    0.000000         0.000000             0.000000   
+50%                    1.002671         0.051773             0.052351   
+75%                    1.691620         0.097682             0.098931   
+max                    3.021828         0.418591             0.426909   
+
+         news_ratio  inspiration_ratio  days_since_last_engagement  
+count  30000.000000       30000.000000                30000.000000  
+mean       0.058703           0.058983                    0.966667  
+std        0.061512           0.061991                    0.179508  
+min        0.000000           0.000000                    0.000000  
+25%        0.000000           0.000000                    1.000000  
+50%        0.047586           0.047824                    1.000000  
+75%        0.082555           0.082664                    1.000000  
+max        0.416734           0.399773                    1.000000  
+
+[8 rows x 27 columns]
+
+
+
+Previous Engagement Trends:
+        previous_day_engagement  previous_week_avg_engagement
+count             30000.000000                  30000.000000
+mean               1434.740206                   1558.025620
+std                1142.257899                    891.359457
+min                   0.000000                      0.000000
+25%                   0.000000                    877.698946
+50%                1651.154074                   1522.390703
+75%                2327.163487                   2261.199077
+max                4672.179813                   4157.246791
+ Engagement Trend Counts:
+ engagement_trend
+Decreasing    18917
+Increasing    11083
+Name: count, dtype: int64
+ Interaction Trends:
+        liking_trend  commenting_trend  sharing_trend
+count  30000.000000      30000.000000   30000.000000
+mean      -0.140633         -0.023900      -0.002733
+std       21.760025          3.257496       0.833596
+min     -448.000000        -24.000000      -6.000000
+25%       -3.000000          0.000000       0.000000
+50%        0.000000          0.000000       0.000000
+75%        3.000000          0.000000       0.000000
+max      485.000000         24.000000       6.000000
+ Interaction Correlations:
+                      engagement_score  liking_behavior  commenting_activity  \
+engagement_score             1.000000         0.658154             0.434630   
+liking_behavior              0.658154         1.000000             0.337803   
+commenting_activity          0.434630         0.337803             1.000000   
+sharing_behavior             0.289445         0.218091             0.133810   
+
+                     sharing_behavior  
+engagement_score             0.289445  
+liking_behavior              0.218091  
+commenting_activity          0.133810  
+sharing_behavior             1.000000  
+
+
+Scrolling vs Watching Stats:
+ count    30000.000000
+mean         0.996529
+std          0.833239
+min          0.000000
+25%          0.000000
+50%          1.002671
+75%          1.691620
+max          3.021828
+Name: scrolling_watching_ratio, dtype: float64
+ Content Type Ratios:
+        education_ratio  entertainment_ratio    news_ratio  inspiration_ratio
+count     30000.000000         30000.000000  30000.000000       30000.000000
+mean          0.066434             0.066974      0.058703           0.058983
+std           0.069162             0.069333      0.061512           0.061991
+min           0.000000             0.000000      0.000000           0.000000
+25%           0.000000             0.000000      0.000000           0.000000
+50%           0.051773             0.052351      0.047586           0.047824
+75%           0.097682             0.098931      0.082555           0.082664
+max           0.418591             0.426909      0.416734           0.399773
+
+Churn & Activity Stats:
+ count    30000.000000
+mean         0.966667
+std          0.179508
+min          0.000000
+25%          1.000000
+50%          1.000000
+75%          1.000000
+max          1.000000
+Name: days_since_last_engagement, dtype: float64
+ High-Risk Churn Users Sample:
+ Empty DataFrame
+Columns: [user_id, day, scrolling_time, video_watching_duration, post_story_views, time_spent_daily, daily_logins, posting_frequency, liking_behavior, commenting_activity, sharing_behavior, educational_time_spent, entertainment_time_spent, news_time_spent, inspirational_time_spent, user_profile, churned, assigned_videos, skipped_videos, assigned_videos_with_timestamps, engagement_score, previous_day_engagement, previous_week_avg_engagement, engagement_growth_rate, liking_trend, commenting_trend, sharing_trend, scrolling_watching_ratio, education_ratio, entertainment_ratio, news_ratio, inspiration_ratio, days_since_last_engagement, engagement_trend]
+Index: []
+
+[0 rows x 34 columns]
+Analysis Complete! Check the plots and summaries above.

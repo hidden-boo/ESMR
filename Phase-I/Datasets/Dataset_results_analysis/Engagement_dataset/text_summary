@@ -1,0 +1,130 @@
+Basic Info on Engagement Dataset:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 30000 entries, 0 to 29999
+Data columns (total 17 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   user_id                   30000 non-null  object 
+ 1   day                       30000 non-null  int64  
+ 2   scrolling_time            30000 non-null  float64
+ 3   video_watching_duration   30000 non-null  float64
+ 4   post_story_views          30000 non-null  int64  
+ 5   time_spent_daily          30000 non-null  float64
+ 6   daily_logins              30000 non-null  int64  
+ 7   posting_frequency         30000 non-null  int64  
+ 8   liking_behavior           30000 non-null  int64  
+ 9   commenting_activity       30000 non-null  int64  
+ 10  sharing_behavior          30000 non-null  int64  
+ 11  educational_time_spent    30000 non-null  float64
+ 12  entertainment_time_spent  30000 non-null  float64
+ 13  news_time_spent           30000 non-null  float64
+ 14  inspirational_time_spent  30000 non-null  float64
+ 15  user_profile              30000 non-null  object 
+ 16  churned                   30000 non-null  bool   
+dtypes: bool(1), float64(7), int64(7), object(2)
+memory usage: 3.7+ MB
+None
+Sample Data:
+  user_id  day  scrolling_time  video_watching_duration  post_story_views  \
+0   U0001    1     1068.848134               569.957773              1564   
+1   U0001    2     1255.547475               522.837180              1764   
+2   U0001    3      576.037383               233.288441              1360   
+3   U0001    4      829.113447               347.776949               958   
+4   U0001    5      651.024495               271.364419              1822   
+
+   time_spent_daily  daily_logins  posting_frequency  liking_behavior  \
+0       2751.461998             5                  0                4   
+1       2656.456656             1                  0                3   
+2       2341.007817             3                  0                1   
+3       2317.602633             3                  0                3   
+4       2344.625998             3                  0                3   
+
+   commenting_activity  sharing_behavior  educational_time_spent  \
+0                    3                 1              352.277602   
+1                    3                 0              253.754419   
+2                    0                 1              108.312910   
+3                    0                 1              203.842008   
+4                    0                 0               78.830001   
+
+   entertainment_time_spent  news_time_spent  inspirational_time_spent  \
+0                202.531867        89.826264                 89.826264   
+1                 88.725432        97.245102                203.731702   
+2                 45.680245       106.618570                 41.396093   
+3                 58.397807        90.788850                 79.263060   
+4                 79.197540        73.915042                 94.683415   
+
+  user_profile  churned  
+0       casual    False  
+1       casual    False  
+2       casual    False  
+3       casual    False  
+4       casual    False  
+Summary Statistics:
+                day  scrolling_time  video_watching_duration  \
+count  30000.000000    30000.000000             30000.000000   
+mean      15.500000      751.038282               690.092442   
+std        8.655586      524.257960               672.078991   
+min        1.000000        0.000000                 0.000000   
+25%        8.000000        0.000000                 0.000000   
+50%       15.500000     1000.000000               571.885911   
+75%       23.000000     1200.000000              1085.841578   
+max       30.000000     1500.000000              2893.949596   
+
+       post_story_views  time_spent_daily  daily_logins  posting_frequency  \
+count      30000.000000      30000.000000  30000.000000       30000.000000   
+mean         974.042600       2305.686308      2.116167           0.301667   
+std          698.081322       1637.644387      1.994193           0.688873   
+min            0.000000          0.000000      0.000000           0.000000   
+25%            0.000000          0.000000      0.000000           0.000000   
+50%         1132.500000       2753.375681      2.000000           0.000000   
+75%         1555.000000       3433.156790      4.000000           0.000000   
+max         1999.000000       5649.000000     11.000000           8.000000   
+
+       liking_behavior  commenting_activity  sharing_behavior  \
+count     30000.000000         30000.000000      30000.000000   
+mean         12.830000             1.169667          0.191167   
+std          22.019444             2.521023          0.615225   
+min           0.000000             0.000000          0.000000   
+25%           0.000000             0.000000          0.000000   
+50%           5.000000             0.000000          0.000000   
+75%          16.000000             1.000000          0.000000   
+max         501.000000            24.000000          6.000000   
+
+       educational_time_spent  entertainment_time_spent  news_time_spent  \
+count            30000.000000              30000.000000     30000.000000   
+mean               236.106080                237.724920       208.177363   
+std                290.613832                290.814172       257.373656   
+min                  0.000000                  0.000000         0.000000   
+25%                  0.000000                  0.000000         0.000000   
+50%                153.798953                156.208815       139.421222   
+75%                333.251387                337.471384       287.522887   
+max               2358.761044               2368.420473      2231.963388   
+
+       inspirational_time_spent  
+count              30000.000000  
+mean                 209.239686  
+std                  259.566355  
+min                    0.000000  
+25%                    0.000000  
+50%                  140.320768  
+75%                  287.959753  
+max                 2209.937926  
+Missing Values:
+user_id                     0
+day                         0
+scrolling_time              0
+video_watching_duration     0
+post_story_views            0
+time_spent_daily            0
+daily_logins                0
+posting_frequency           0
+liking_behavior             0
+commenting_activity         0
+sharing_behavior            0
+educational_time_spent      0
+entertainment_time_spent    0
+news_time_spent             0
+inspirational_time_spent    0
+user_profile                0
+churned                     0
+dtype: int64
