@@ -1,2 +1,18 @@
 Phase-III/Preprocessing/Batch_runs/engagement_batches/engagement_batch_1.csv
 Phase-III/Ablations/Output_training/Engagement-only/user_data_dict_engagement_only_ablation.json
+
+# Large files
+Phase-I/Video_assignement/Datasets/assigned_videos_11_timestamps.csv
+Phase-II/Clustering/Generated_dataset/validated_emotion_clusters.csv
+Phase-I/Video_assignement/Datasets/final_dataset_combined_ready.csv
+Phase-III/LightGBM/Top-N Recommendations/daily_recommendations.json
+Phase-II/TabTransfomers/Datasets/processed_engagement_with_clusters.json
+Phase-III/Ablations/Output_training/Emotion-only/user_data_dict_emotion_only_ablation.json
+Phase-III/ESMR/Output_training/q_table_hybrid_rl_lightgbm_dynamic.pkl
+Phase-II/TabTransfomers/Datasets/dataset_with_predictions.json
+Phase-III/ESMR/Output_training/user_data_dict.json
+Phase-III/Ablations/Output_training/Engagement-only/user_data_dict_engagement_only_ablation.json
+Phase-III/Ablations/Output_training/Emotion-only/q_table_emotion_only_no_causal_ablation.pkl
+Phase-II/Causal Discovery/Datasets_generated/flat_user_data_with_transitions.csv
+Phase-III/Ablations/Output_training/Engagement-only/q_table_engagement_only_rl_ablation.pkl
+Phase-III/Preprocessing/Batch_runs/engagement_batches/engagement_batch_1.csv
