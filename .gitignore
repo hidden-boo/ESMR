@@ -16,3 +16,4 @@ Phase-III/Ablations/Output_training/Emotion-only/q_table_emotion_only_no_causal_
 Phase-II/Causal Discovery/Datasets_generated/flat_user_data_with_transitions.csv
 Phase-III/Ablations/Output_training/Engagement-only/q_table_engagement_only_rl_ablation.pkl
 Phase-III/Preprocessing/Batch_runs/engagement_batches/engagement_batch_1.csv
+.DS_Store
