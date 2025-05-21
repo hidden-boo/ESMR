@@ -1,2 +1,104 @@
-# ESMR# BooRepo
-# BooRepo
+# Emotion-Aware Reinforcement Learning for Social Media Recommendation (ESMR)
+
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+
+> A hybrid RL framework that adaptively recommends content based on user emotional states, engagement signals, and causal insights.
+
+---
+
+## Overview
+
+This repository implements a **hybrid reinforcement learning system** for **emotion-aware content recommendation**, designed to improve user well-being on social media.  
+**Use Case**: Our method targets early intervention for users in negative emotional states and adapts content toward recovery, as described in our [ACM RecSys 2025 submission].
+
+---
+
+## Key Features
+
+- **Emotion Prediction**: Uses a TabTransformer to infer daily user emotions from engagement features.
+- **User Simulation**: Models scrolling, watching, likes, shares, and churn using real-world-inspired distributions.
+- **Hybrid Recommendation**: Combines LightGBM during stable periods and Q-learning during negative emotional streaks.
+- **Causal Reward Shaping**: Leverages DirectLiNGAM-based causal parents of emotional states to enhance reward feedback.
+- **Ablation Studies**: Includes emotion-only and engagement-only variants for comparative analysis.
+
+---
+
+## Directory Structure
+
+```text
+BooRepo/
+├── video_assignmenet.py              ← Assigns videos using category preferences and engagement time
+├── ft_transformers.py                ← TabTransformer-based emotion classifier
+├── user_env.py                       ← Gym environment with RL reward shaping (emotion + causal)
+├── train_q_learning.py               ← Main training loop for emotion-aware RL agent
+├── run_simulation_only.py            ← Runs final policy simulation using Q-table
+├── run_simulation_emotion_only.py    ← Emotion-only ablation simulation
+├── run_simulation_only_ablation.py   ← Engagement-only ablation simulation
+├── train_q_learning_emotion_only.py  ← Emotion-only Q-learning training
+├── train_q_learning_ablation.py      ← Engagement-only Q-learning training
+├── load_env_data.py                  ← Preprocesses and loads JSON engagement dataset into RL format
+├── additional_tests.py               ← Compares final valence and positive recovery across models
+├── plot_all_results.py               ← Generates all plots and summary statistics
+├── dominant_emotion_plot.py          ← Plots RL vs LightGBM dominant emotion trajectories
+├── emotion_metrics_eval.py           ← Calculates emotion variance, reward std, recovery time, etc.
+├── eval_plotting.py                  ← Reward and emotion plotting utilities
+├── /results/                         ← Saved logs, Q-tables, plots
+└── /Data/                            ← Required input files (JSON + CSV)
+```
+## Quickstart
+
+### 1. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+### 2. Train the Emotion-Aware RL Agent
+```
+python train_q_learning.py
+```
+### 3. Simulate the policy rollout
+```
+python run_simulation_only.py
+
+```
+### 4. Generate Evaluation Plots
+```
+python plot_all_results.py
+```
+
+All outputs will be saved to `/results/`
+
+## Evaluation Metrics
+
+This explains what you measure (and why) across emotion-aware vs ablation variants. We evaluate all recommendation strategies based on:
+
+-  **Positive final emotion valence**
+-  **Time to emotional recovery**
+-  **Emotion volatility** (standard deviation over time)
+-  **Negative emotion day counts**
+-  **Dominant emotion trajectory curves**
+
+See `additional_tests.py`, `dominant_emotion_plot.py`, and `emotion_metrics_eval.py` for implementation details.
+
+## Ablation Studies
+
+We include controlled variants of our hybrid model to evaluate the impact of each component:
+
+- `train_q_learning_emotion_only.py` — Emotion shaping only (no causal reasoning)
+- `train_q_learning_ablation.py` — Engagement-only shaping (no emotion or causal signals)
+- `train_q_learning.py` — Full model (emotion + causal shaping)
+
+Run corresponding `run_simulation_*.py` files to evaluate each.
+
+## Required Data 
+Place the following files in the `/Data/ ` folder:
+-  **processed_engagement_with_clusters.json** — Simulated user engagement and emotion logs
+-  **content_dataset.csv** — Metadata for all videos (category, emotion, duration)
+-  **top_causal_parents.csv** — Causal graph output from DirectLiNGAM
+-  **daily_recommendations.json** — LightGBM-generated baseline recommendations
+
+## Citation 
+
+This codebase accompanies a research manuscript currently under double-blind review at conference. A citation will be provided upon acceptance.
+
+
