@@ -13,7 +13,7 @@
 ## Overview
 
 This repository implements a **hybrid reinforcement learning system** for **emotion-aware content recommendation**, designed to improve user well-being on social media.  
-**Use Case**: Our method targets early intervention for users in negative emotional states and adapts content toward recovery, as described in our [ACM RecSys 2025 submission].
+**Use Case**: Our method targets early intervention for users in negative emotional states and adapts content toward recovery.
 
 ---
 
