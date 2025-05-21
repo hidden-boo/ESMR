@@ -1,8 +1,9 @@
 # Emotion-Aware Reinforcement Learning for Social Media Recommendation (ESMR)
 
 <p align="center">
-  <img src="https://media.giphy.com/media/ekjmhJUGHJm7FcZRSm/giphy.gif" alt="Recommendation Animation" width="600"/>
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmkyNGRjaG92OTdpd2RwaWp1MnpjaDI2MWY0azN3MG5ndmlhOHUxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/t6lbYDVDjSuF8K7XWB/giphy.gif" alt="Recommender System Animation" width="700"/>
 </p>
+
 
 
 > A hybrid RL framework that adaptively recommends content based on user emotional states, engagement signals, and causal insights.
